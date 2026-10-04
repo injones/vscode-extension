@@ -1,0 +1,84 @@
+{
+  "name": "tardis",
+  "displayName": "tardis",
+  "description": "A useless set of tools.",
+  "version": "0.0.1",
+  "publisher": "tardis",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tardis.status",
+        "title": "Tardis: Git Status"
+      },
+      {
+        "command": "tardis.pin",
+        "title": "Tardis: Pin file"
+      },
+      {
+        "command": "tardis.pins",
+        "title": "Tardis: Edit pins"
+      },
+      {
+        "command": "tardis.gotoPin1",
+        "title": "Tardis: Goto pinned file 1"
+      },
+      {
+        "command": "tardis.gotoPin2",
+        "title": "Tardis: Goto pinned file 2"
+      },
+      {
+        "command": "tardis.gotoPin3",
+        "title": "Tardis: Goto pinned file 3"
+      },
+      {
+        "command": "tardis.gotoPin4",
+        "title": "Tardis: Goto pinned file 3"
+      },
+      {
+        "command": "tardis.quickPins",
+        "title": "Tardis: Show pins"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "tardis.pin",
+          "when": "resource != null"
+        }
+      ]
+    }
+  },
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.140.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "typescript-eslint": "^8.61.1",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
