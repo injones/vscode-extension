@@ -4,6 +4,10 @@
   "description": "A useless set of tools.",
   "version": "0.0.1",
   "publisher": "tardis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/injones/vscode-extension.git"
+  },
   "engines": {
     "vscode": "^1.140.0"
   },
